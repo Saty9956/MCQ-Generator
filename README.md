@@ -1,6 +1,95 @@
-📚 AI-Powered MCQ Generator (Groq + Streamlit)An intelligent, high-speed Multiple Choice Question (MCQ) generator powered by the Groq LPU™ Inference Engine and Streamlit. This tool allows users to upload technical documents (PDF/TXT) or select specific subjects to generate high-quality assessment questions instantly using the mixtral-8x7b-32768 model.🚀 Key FeaturesMulti-Source Input: Extract content from PDFs and Text files or generate questions based on pre-defined subjects.Blazing Fast Inference: Leverages Groq's LPU architecture for near-instantaneous text generation.Customizable Assessments: Select the number of questions (5-50) and difficulty levels (Easy, Medium, Hard).Clean UI: Built with Streamlit for a seamless, interactive user experience.Robust Error Handling: Includes defensive logic for PDF parsing and API communication.🛠️ Tech StackTechnologyPurposePythonCore logic & scriptingStreamlitFrontend UI & file handlingGroq APILarge Language Model (Mixtral-8x7b) inferencePyPDF2PDF text extractionPython-DotenvSecure environment variable management⚙️ Installation & SetupClone the Repository:Bashgit clone https://github.com/Saty9956/MCQ-Generator.git
+# 📚 AI-Powered MCQ Generator (Groq + Streamlit)
+
+An intelligent, high-speed Multiple Choice Question (MCQ) generator powered by the **Groq LPU™ Inference Engine** and **Streamlit**. This tool allows users to upload technical documents (PDF/TXT) or select specific subjects to generate high-quality assessment questions instantly using the `mixtral-8x7b-32768` model.
+
+---
+
+## 🚀 Key Features
+
+* **Multi-Source Input:** Extract content from **PDFs** and **Text files** or generate questions based on pre-defined subjects.
+* **Blazing Fast Inference:** Leverages Groq's LPU architecture for near-instantaneous text generation.
+* **Customizable Assessments:** Select the number of questions (5-50) and difficulty levels (Easy, Medium, Hard).
+* **Clean UI:** Built with Streamlit for a seamless, interactive user experience.
+* **Robust Error Handling:** Includes defensive logic for PDF parsing and API communication.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology        | Purpose                                       |
+| :---------------- | :-------------------------------------------- |
+| **Python**        | Core logic & scripting                        |
+| **Streamlit**     | Frontend UI & file handling                   |
+| **Groq API**      | Large Language Model (Mixtral-8x7b) inference |
+| **PyPDF2**        | PDF text extraction                           |
+| **Python-Dotenv** | Secure environment variable management        |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Saty9956/MCQ-Generator.git
 cd MCQ-Generator
-Install Dependencies:Bashpip install -r requirements.txt
-Configure Environment Variables:Create a .env file in the root directory and add your Groq API Key:Code snippetGROQ_API_KEY=your_groq_api_key_here
-Run the Application:Bashstreamlit run app.py
-📖 How It WorksExtraction Layer: The app uses PyPDF2 to strip text from uploaded documents.Prompt Engineering: A structured prompt is sent to the Mixtral model, enforcing a strict JSON-like format (Question, Options, Answer).Inference: Groq processes the context and returns the generated MCQs.Presentation: Streamlit renders the output in a clean, readable format.📂 Project Structureapp.py: Main Streamlit application code.MCQGenerator.ipynb: Original Jupyter Notebook for prototyping and CLI usage..env: (Ignored) Storage for sensitive API keys.requirements.txt: List of necessary Python libraries.🤝 ContributingFeel free to fork this repository, open issues, or submit pull requests to improve the parsing logic or add support for more file formats (like .docx or .html).Author: Satyartha ShuklaAI/ML Systems Intern @ Intel | M.Tech AI @ NIT Jalandhar
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory and add your Groq API Key:
+
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📖 How It Works
+
+**Extraction Layer:** The app uses PyPDF2 to strip text from uploaded documents.
+
+**Prompt Engineering:** A structured prompt is sent to the Mixtral model, enforcing a strict JSON-like format (Question, Options, Answer).
+
+**Inference:** Groq processes the context and returns the generated MCQs.
+
+**Presentation:** Streamlit renders the output in a clean, readable format.
+
+---
+
+## 📂 Project Structure
+
+```
+MCQ-Generator/
+│
+├── app.py                  # Main Streamlit application
+├── MCQGenerator.ipynb      # Jupyter Notebook prototype
+├── requirements.txt        # Dependencies
+├── .env                    # Environment variables (ignored)
+└── README.md               # Project documentation
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repository, open issues, or submit pull requests to improve the parsing logic or add support for more file formats.
+
+---
+
+## 👤 Author
+
+**Satyartha Shukla**
+AI/ML Systems Intern @ Intel | M.Tech AI @ NIT Jalandhar
