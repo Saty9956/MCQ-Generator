@@ -69,6 +69,11 @@ streamlit run app.py
 
 ---
 
+## 🧠 Architectural Tradeoffs & Enterprise Scaling
+While this pipeline is highly functional for mid-sized documents, injecting the entire extracted text directly into the prompt context window has limitations:
+* **The Tradeoff:** This guarantees 100% context retention without retrieval loss but caps scalability at the model's token limit (32k tokens). 
+* **Enterprise Scaling (Next Steps):** To scale this for 500+ page enterprise documents, this architecture should be upgraded to a **Retrieval-Augmented Generation (RAG)** pipeline (chunking, embedding, and retrieving via Vector DBs like Pinecone/FAISS). Furthermore, migrating from string-based prompt formatting to strict JSON schemas using `Pydantic` and API tool-calling would guarantee deterministic downstream parsing.
+
 ## 📂 Project Structure
 
 ```
